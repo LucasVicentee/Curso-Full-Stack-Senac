@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assests/css/cadastroDeLivro.css">
+    <title>Formulário para cadastro</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h2>Cadastro de Livro</h2>
+            <form>
+                
+                <label for="codigo">Código: </label>
+                <input type="text" name="codigo" id="codigo" required placeholder="123">
+    
+                <br>
+                
+                <label for="titulo">Titilo: </label>
+                <input type="text" name="titulo" id="titulo" required placeholder="Titulo do Livro">
+    
+                <br>
+            
+                <label for="isbn">ISBN: </label>
+                <input type="number" name="isbn" id="isbn" required placeholder="">
+    
+                <br>
+    
+                <label for="genero">Genêro: </label>
+                <input type="text" name="genero" id="genero" required placeholder="Genêro do Livro">
+    
+                <br>
+    
+                <label for="autores">Autores: </label>
+                <select name="autores" id="autores">
+                    <option value="companhiadasletras">Companhia das Letras</option>
+                    <option value="record">Editora Record</option>
+                    <option value="intrinseca">Intrínseca</option>
+                    <option value="harpercollins">HarperCollins Brasil</option>
+                    <option value="globo_livros">Globo Livros</option>
+                    <option value="rocco">Rocco</option>
+                    <option value="saraiva">Saraiva</option>
+                    <option value="moderna">Moderna</option>
+                    <option value="ftd">FTD Educação</option>
+                    <option value="circulo_do_livro">Círculo do Livro</option>
+                    <option value="martins_fontes">Martins Fontes</option>
+                    <option value="novo_seculo">Novo Século</option>
+                    <option value="pandorga">Pandorga</option>
+                    <option value="valentina">Valentina</option>
+                    <option value="sextante">Sextante</option>
+                    <option value="arqueiro">Arqueiro</option>
+                    <option value="universo_dos_livros">Universo dos Livros</option>
+                    <option value="autentica">Autêntica</option>
+                    <option value="darkside">DarkSide Books</option>
+                    <option value="paz_terra">Paz e Terra</option>
+                </select>
+    
+                <br>
+    
+                <label for="data_lancamento">Data de Lançamento: </label>
+                <input type="date" name="data_lancamento" id="data_lancamento">
+    
+                <button>Enviar</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

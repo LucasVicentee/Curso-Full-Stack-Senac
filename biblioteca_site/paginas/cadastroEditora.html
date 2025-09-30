@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assests/css/cadastroEditora.css">
+    <title>Formulário para cadastro</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Cadastro da Editora</h2>
+        <form>
+            
+            <label for="codigo">Código: </label>
+            <input type="text" name="codigo" id="codigo" required placeholder="123">
+
+            <br>
+            
+            <label for="nome">Nome: </label>
+            <input type="text" name="nome" id="nome" required placeholder="Editora Record">
+
+            <br>
+        
+            <label for="telefone">Telefone: </label>
+            <input type="text" name="telefone" id="telefone" required placeholder="(00) 00000-0000">
+
+            <br>
+
+            <label for="text">Endereço: </label>
+            <input type="text" name="endereco" id="endereco" required placeholder="Rua">
+
+            <br>
+
+            <label for="cidade">Cidade: </label>
+            <select name="cidade" id="cidade">
+                <option value="presidente_prudente">Presidente Prudente</option>
+                <option value="alvares_machado">Álvares Machado</option>
+                <option value="pirapozinho">Pirapozinho</option>
+                <option value="regente_feijo">Regente Feijó</option>
+                <option value="martinopolis">Martinópolis</option>
+                <option value="rancharia">Rancharia</option>
+                <option value="sandovalina">Sandovalina</option>
+                <option value="santo_anastacio">Santo Anastácio</option>
+                <option value="mirante_do_paranapanema">Mirante do Paranapanema</option>
+                <option value="teodoro_sampaio">Teodoro Sampaio</option>
+                <option value="presidente_venceslau">Presidente Venceslau</option>
+                <option value="caiua">Caiuá</option>
+                <option value="florinea">Florínea</option>
+                <option value="maraba_paulista">Marabá Paulista</option>
+                <option value="estrela_do_norte">Estrela do Norte</option>
+                <option value="euclides_da_cunha_paulista">Euclides da Cunha Paulista</option>
+                <option value="indiana">Indiana</option>
+                <option value="anhumas">Anhumas</option>
+                <option value="narandiba">Narandiba</option>
+                <option value="emilianopolis">Emilianópolis</option>
+                <option value="pontalinda">Pontalinda</option>
+            </select>
+
+            <br>
+
+            <label for="site">Site: </label>
+            <input type="text" name="site" id="site" required placeholder="https://www.record.com.br/">
+
+            <button>Enviar</button>
+        </form>
+    </div>
+</body>
+</html>

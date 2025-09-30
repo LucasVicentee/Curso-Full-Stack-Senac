@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assests/css/cadastroDeEmprestimo.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+
+        <h2>Cadastro de Empréstimo</h2>
+
+        <form>
+
+            <label for="nome_do_usuario">Nome do Usuário: </label>
+            <input type="text" name="nome_do_usuario" id="nome_do_usuario" required placeholder="Nome do Aluno">
+
+            <br>
+
+            <label for="data_de_emprestimo">Data de Empréstimo: </label>
+            <input type="date" name="data_de_emprestimo" id="data_de_emprestimo" required placeholder="dd/mm/aaaa">
+
+            <br>
+
+            <label for="data_de_devolucao">Data de Devolução: </label>
+            <input type="date" name="data_de_devolucao" id="data_de_devolucao" required placeholder="dd/mm/aaaa">
+
+            <br>
+
+            <label for="livro">Livro: </label>
+            <select name="livro" id="livro">
+                <option value="dom_casmurro">Dom Casmurro — Machado de Assis</option>
+                <option value="grande_sertao">Grande Sertão: Veredas — Guimarães Rosa</option>
+                <option value="o_alquimista">O Alquimista — Paulo Coelho</option>
+                <option value="capitaes_da_areia">Capitães da Areia — Jorge Amado</option>
+                <option value="a_hora_da_estrela">A Hora da Estrela — Clarice Lispector</option>
+                <option value="vidas_secas">Vidas Secas — Graciliano Ramos</option>
+                <option value="senhora">Senhora — José de Alencar</option>
+                <option value="triste_fim_policarpo_quaresma">O Triste Fim de Policarpo Quaresma — Lima Barreto</option>
+                <option value="iracema">Iracema — José de Alencar</option>
+                <option value="o_guarani">O Guarani — José de Alencar</option>
+                <option value="orgulho_preconceito">Orgulho e Preconceito — Jane Austen</option>
+                <option value="1984">1984 — George Orwell</option>
+                <option value="admiravel_mundo_novo">Admirável Mundo Novo — Aldous Huxley</option>
+                <option value="o_pequeno_principe">O Pequeno Príncipe — Antoine de Saint-Exupéry</option>
+                <option value="o_senhor_dos_aneis">O Senhor dos Anéis — J.R.R. Tolkien</option>
+                <option value="o_hobbit">O Hobbit — J.R.R. Tolkien</option>
+                <option value="harry_potter_pedra_filosofal">Harry Potter e a Pedra Filosofal — J.K. Rowling</option>
+                <option value="as_cronicas_de_narnia">As Crônicas de Nárnia — C.S. Lewis</option>
+                <option value="o_codigo_da_vinci">O Código Da Vinci — Dan Brown</option>
+                <option value="moby_dick">Moby Dick — Herman Melville</option>
+            </select>
+
+            <button><p>Cadastrar Empréstimo</p></button>
+
+            <table id="tabela" border="1px">
+                <tr>
+                    <th>Titulo do Livro</th>
+                    <th>Autores</th>
+                    <th>Ações</th>
+                </tr>
+                <tr>
+                    <td>Programando em C#</td>
+                    <td>Funlano</td>
+                    <td>Remover</td>
+                </tr>
+                <tr>
+                    <td>Programando em Delphi</td>
+                    <td>Fulano 2</td>
+                    <td>Remover</td>
+                </tr>
+            </table>
+        </form>
+
+    </div>
+</body>
+</html>
