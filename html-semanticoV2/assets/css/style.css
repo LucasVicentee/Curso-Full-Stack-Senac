@@ -43,7 +43,7 @@ body {
 #principal img {
     width: 100%;
     height: auto;
-    border-radius: 20px 20px 0 0; /* Bordas arredondadas apenas no topo */
+    border-radius: 20px; /* Bordas arredondadas apenas no topo */
     display: block; /* Remove espaço embaixo da imagem */
     object-fit: cover; /* Mantem a proporção da Imagem */
 }
@@ -52,21 +52,90 @@ body {
    MENU DE NAVEGAÇÃO MODERNO
    =========================================== */
  
-   #menu {
+#menu {
     /* LAYOUT FLEXÍVEL - Distribui itens uniformemente */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap; /* Quebra linha em telas pequenas */
-   
+
     /* DESIGN MODERNO */
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     padding: 15px 20px;
     width: 100%;
-   
+
     /* EFEITOS VISUAIS */
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1); /* Borda interna sutil */
     position: relative;
+}
+
+/* SEPARADORES ENTRE LINKS - Remove o "|" do HTML e cria com CSS */
+#menu a {
+	/* RESET DE LINK */
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 14px;
+	text-transform: uppercase; /* Maiúsculas para aspecto profissional */
+	letter-spacing: 1px; /* Espaçamento entre letras */
+	/* LAYOUT E ESPAÇAMENTO */
+	padding: 12px 20px;
+	margin: 0 5px;
+	border-radius: 25px; /* Botões arredondados */
+	/* TRANSIÇÕES SUAVES - Animações nos hover effects */
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	position: relative;
+	overflow: hidden;
+}
+
+#menu a:active::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* EFEITO RIPPLE - Ondulação ao clicar (moderno) */
+#menu a::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 0;
+	height: 0;
+	background: rgba(255, 255, 255, 0.3);
+	border-radius: 50%;
+	transition: width 0.4s, height 0.4s, top 0.4s, left 0.4s;
+	transform: translate(-50%, -50%);
+	z-index: 0;
+}
+
+#menu a:hover {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#menu a.ativo {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+    /* Desing clean */
+    background: #ffffff;
+
+    line-height: 1.8;
+    color: #2c3e50;
+}
+
+#conteudo {
+    padding: 40px 50px;
+    width: 100%;
+}
+
+.img-campanha {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 100%;
+    height: auto;
 }
 
 @keyframes fadeInUp {
