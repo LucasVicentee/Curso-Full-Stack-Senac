@@ -163,7 +163,6 @@ body {
     opacity: 0.9;
 }
 
-
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -172,5 +171,92 @@ body {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* Smartphones pequenos */
+@media screnn and (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    #principal {
+        width: 98%;
+        border-radius: 10px;
+    }
+
+    #principal img {
+        border-radius: 10px 10px 0 0;
+    }
+}
+
+/* Responsividade - Design mobile-first */
+
+@media screen and (max-width: 768px) {
+    /* Container principal mobile */
+    #principal {
+        width: 95%;
+        margin: 5px auto;
+        border-radius: 15px;
+    }
+
+    /* Imagem de capa responsiva */
+    #principal img {
+        border-radius: 15px 15px 0 0;
+    }
+
+    /* Menu de navegação mobile */
+    #menu {
+        flex-direction: column;
+        padding: 20px 25px;
+        gap: 10px;
+    }
+
+    #menu a {
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+        padding: 15px 20px;
+        font-size: 16px;
+    }
+
+    /* Conteúdo principal mobile */
+    #conteudo {
+        padding: 25px 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+        margin-bottom: 25px;
+    }
+
+    h2 {
+        font-size: 1.7em;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.7;
+        text-align: left;
+    }
+
+    /* Rodapé mobile */
+    #rodape {
+        padding: 20px 15px;
+        border-radius: 0 0 15px 15px;
+    }
+}
+
+/* Tablets - Ajustes para telas médias (768px a 1024px) */
+@media (max-width: 1024px) {
+    #principal {
+        width: 98;
+        margin: 10px auto;
+    }
+    #conteudo {
+        padding: 30px 35px;
+    }
+    h1 {
+        font-size: 2.2em;
     }
 }
