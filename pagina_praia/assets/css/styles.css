@@ -58,7 +58,7 @@ img
     border-radius: 10px;
 }
 
-.praias, .sobre, .contato {
+.secao-praias, .secao-sobre, .secao-contato {
     padding: 40px 20px;
     text-align: center;
 }
@@ -105,4 +105,12 @@ input, textarea {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+}
+
+input:hover, textarea:hover {
+    background-color: var(--cor-fundo);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #27cb11 0%, #2575fc 100%);
 }
