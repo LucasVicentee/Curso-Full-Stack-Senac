@@ -1,0 +1,65 @@
+:root {
+    --corDeFundo: #00796b;
+    --corBranca: white;
+    --corDoCorpo: #e0f7fa;
+    --corDoTexto: #555;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--corDoCorpo);
+}
+
+header {
+    background-color: var(--corDeFundo);
+    color: var(--corBranca);
+    padding: 20px;
+    text-align: center;
+}
+
+.grade-praias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.praia {
+    background-color: var(--corBranca);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    cursor: pointer;
+    transition: tranform 0.2s ease;
+}
+
+.praia:hover {
+    transform: scale(1.02);
+}
+
+.praia img {
+    width: 100%;
+    max-width: 338px;
+    border-radius: 6px;
+}
+
+.descricao {
+    display: none;
+    margin-top: 10px;
+    color: var(--corDoTexto);
+}
+
+footer {
+    background-color: var(--corDeFundo);
+    color: var(--corBranca);
+    text-align: center;
+    padding: 10px;
+}
