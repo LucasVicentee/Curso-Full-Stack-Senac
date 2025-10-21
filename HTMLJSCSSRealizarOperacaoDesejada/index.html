@@ -4,33 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/styles.css">
-    <title>Realizar operações</title>
+    <title>RealizarOperaçãoMatematica</title>
 </head>
 <body>
     <header>
-        <h1>Realizar a operação matemática solicitada</h1>
+        <h1>Realizar a operação Matemática solicitada</h1>
     </header>
-
     <main>
         <div id="container">
-            <label for="operacao">Informe a Operação</label>
-            <input type="number" name="operacao" id="operacao">
-            <label for="primeiroNumero">Informe o primeiro número: </label>
+            <fieldset class="separador">
+                <legend>Escolha a Operação Desejada</legend>
+                <label for="operacao">Operação: </label>
+                <select id="operacao" name="operacao">
+                    <option value="somar">Somar</option>
+                    <option value="subtrair">Subtrair</option>
+                    <option value="multiplicar">Multimplicar</option>
+                    <option value="dividir">Dividir</option>
+                </select>
+            </fieldset>
+            <label for="primeiroNumero">Informe o primeiro número</label>
             <input type="number" name="primeiroNumero" id="primeiroNumero">
-            <label for="segundoNumero">Informe o segundo número: </label>
+            <label for="segundoNumero">Informe o segundo número</label>
             <input type="number" name="segundoNumero" id="segundoNumero">
-
+            
             <button type="button" id="calcular">Calcular</button>
-
+            
             <fieldset id="resposta">
-                <legend>Resultado da operação</legend>
+                <legend>Resultado da Operação</legend>
                 <output id="resultado"></output>
             </fieldset>
         </div>
+
     </main>
-
     <footer>Rodapé</footer>
-
     <script src="./assets/js/scripts.js"></script>
 </body>
 </html>
