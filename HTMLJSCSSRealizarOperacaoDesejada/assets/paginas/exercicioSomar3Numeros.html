@@ -3,29 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/styles.css">
-    <title>RealizarOperaçãoMatematica</title>
+    <link rel="stylesheet" href="../css/exercicioSomar3Numeros.css">
+    <title>Somar 3 números</title>
 </head>
 <body>
-    <header>
-        <h1>Realizar a operação Matemática solicitada</h1>
-    </header>
     <main>
         <div id="container">
             <fieldset class="separador">
-                <legend>Escolha a Operação Desejada</legend>
-                <label for="operacao">Operação: </label>
-                <select id="operacao" name="operacao">
-                    <option value="somar">Somar</option>
-                    <option value="subtrair">Subtrair</option>
-                    <option value="multiplicar">Multimplicar</option>
-                    <option value="dividir">Dividir</option>
-                </select>
+                <legend>Somar 3 números</legend>
             </fieldset>
             <label for="primeiroNumero">Informe o primeiro número</label>
             <input type="number" name="primeiroNumero" id="primeiroNumero">
             <label for="segundoNumero">Informe o segundo número</label>
             <input type="number" name="segundoNumero" id="segundoNumero">
+            <label for="terceiroNumero">Informe o terceiro número</label>
+            <input type="number" name="terceiroNumero" id="terceiroNumero">
             
             <button type="button" id="calcular">Calcular</button>
             
@@ -36,9 +28,8 @@
             
             <button type="button" id="limpar">Limpar</button>
         </div>
-
     </main>
-    <footer>Rodapé</footer>
-    <script src="./assets/js/scripts.js"></script>
+
+    <script src="../js/exercicioSomar3Numeros.js"></script>
 </body>
 </html>
