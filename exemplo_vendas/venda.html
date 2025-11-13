@@ -10,9 +10,83 @@
     <!--Implementação da programação-->
     <script type="text/javascript">
         $(document).ready(function() {
-           
-
+           $("#btsair").click(function () {
+            if (confirm("Deseja realmente sair?")) {
+                window.close();
+            }
         });
+
+        $("#btcancelar").click(function () {
+            if (confirm("Tem certeza que deseja cancelar esta venda? Todos os dados serão apagados.")) {
+                limparFormulario();
+            }
+        });
+
+        function limparFormulario() {
+            $("#cliente").val("1");
+            $("#tbdata").val("");
+            $("#fpagamento").val("1");
+            $("#tbtotal").val("");
+            $("#tbquantidade").val(1);
+            $("#tbvrunitario").val("");
+            $("#tbvrtotalitem").val("");
+            $("#tbitens tbody").empty();
+        }
+
+        $("#btnovo").click(function () {
+            if (confirm("Tem certeza que deseja criar uma nova venda? Todos os dados atuais serão apagados.")) {
+                limparFormulario();
+                $("#cliente").focus();
+            }
+        });
+        
+        $("#produtos").change(function () {
+            var valor = $("#produtos").val();
+            var preco = 0;
+
+            if (valor == "1") preco = 59.99;
+            else if (valor == "2") preco = 39.99;
+            else if (valor == "3") preco = 29.99;
+
+            $("#tbvrunitario").val(preco.toFixed(2));
+            $("#tbquantidade").val(1);
+            calcularTotalItem();
+        });
+
+        function calcularTotalItem() {
+            var quantidade = parseFloat($("#tbquantidade").val()) || 0;
+            var valorUnitario = parseFloat($("#tbvrunitario").val()) || 0;
+            var total = quantidade * valorUnitario;
+            $("#tbvrtotalitem").val(total.toFixed(2));
+        }
+        
+        $("#tbquantidade").on("input", function() {
+            calcularTotalItem();
+        })
+
+        $("#btadicionar").click(function () {
+            var produto = $("#produtos option:selected").text();
+            var quantidade = $("#tbquantidade").val();
+            var valorUnitario = $("#tbvrunitario").val();
+            var total = $("#tbvrtotalitem").val();
+
+            if (quantidade == "" || quantidade <= 0) {
+                alert("Informe uma quantidade válida!");
+                return;
+            }
+
+            // prepend é o comando para adicionar 
+            $("#tbitens tbody").append(` 
+                <tr>
+                    <td>${produto}</td>
+                    <td>${quantidade}</td>
+                    <td>R$ ${valorUnitario}</td>
+                    <td>R$ ${total}</td>
+                    <td><button class="remover">Remover</button></td>
+                <tr>
+            `)
+        })
+    });
 
         
 
