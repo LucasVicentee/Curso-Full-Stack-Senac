@@ -102,12 +102,17 @@
                 totalVenda += valor;
             })
             $("#tbtotal").val(totalVenda.toFixed(2));
+            $("#tbtotvenda").val(totalVenda.toFixed(2));
         }
 
         $(document).on("click", ".remover", function() {
             $(this).closest("tr").remove();
             atualizarTotalVenda();
         })
+
+        function calcularTroco() {
+            
+        }
     });
 
         
@@ -309,9 +314,6 @@
                 <input type="button" id="btcancela2" value="Cancelar" class="btn btn-danger">
                 </div>
             </div>
-        
-
-
     </div>
 </div>
 
