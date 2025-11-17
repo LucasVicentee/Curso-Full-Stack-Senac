@@ -9,6 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!--Implementação da programação-->
     <script type="text/javascript">
+
         $(document).ready(function() {
            $("#btsair").click(function () {
             if (confirm("Deseja realmente sair?")) {
@@ -85,6 +86,27 @@
                     <td><button class="remover">Remover</button></td>
                 <tr>
             `)
+
+            //Atualiza o total da venda
+            atualizarTotalVenda();
+            
+            $("#tbquantidade").val(1);
+            $("#tbvrunitario").val("");
+            $("#tbvrtotalitem").val("");
+        })
+
+        function atualizarTotalVenda() {
+            var totalVenda = 0;
+            $("#tbitens tbody tr").each(function () {
+                var valor = parseFloat($(this).find("td:eq(3)").text().replace("R$ ", "")) || 0;
+                totalVenda += valor;
+            })
+            $("#tbtotal").val(totalVenda.toFixed(2));
+        }
+
+        $(document).on("click", ".remover", function() {
+            $(this).closest("tr").remove();
+            atualizarTotalVenda();
         })
     });
 
@@ -301,6 +323,22 @@
 
   <script type="text/javascript">
        
+        const modal = document.getElementById("meuModal");
+        const btnAbrir = document.getElementById("openModalBtn");
+        const btnFechar = document.getElementsByClassName("close")[0];
+        const btnFechar2 = document.getElementById("btcancela2");
+
+        btnAbrir.addEventListener('click', () => {
+            modal.style.display = "block";
+        });
+
+        btnFechar.addEventListener('click', () => {
+            modal.style.display = "none";
+        });
+
+        btnFechar2.addEventListener('click', () => {
+            modal.style.display = "none";
+        });
 
   </script>
 
