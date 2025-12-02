@@ -5,3 +5,9 @@ function calcularMedia(notas) {
     const status = media >= 7 ?'Aprovado' : 'Reprovado';
     return { media: media.toFixed(2), status };
 }
+
+function salvarResultado(resultado) {
+    const historico = JSON.parse(localStorage.getItem('historico')) || [];
+    historico.push(resultado);
+    localStorage.setItem('historico', JSON.stringify(historico));
+}
